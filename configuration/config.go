@@ -60,6 +60,7 @@ type Flags struct {
 	S3Region string
 	RollBarToken string
 	RemoteLogs bool
+	Infos string
 }
 
 type EventSourcing struct{
