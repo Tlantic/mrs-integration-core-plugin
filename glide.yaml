@@ -1,0 +1,36 @@
+package: github.com/Tlantic/mrs-integration-core-plugin
+import:
+- package: github.com/Sirupsen/logrus
+  version: v0.10.0
+  subpackages:
+  - github.com\Sirupsen\logrus
+- package: github.com/Tlantic/mrs-integration-utils
+  version: v0.0.25
+  subpackages:
+  - github.com\Tlantic\mrs-integration-utils\configuration
+- package: github.com/codegangsta/negroni
+  subpackages:
+  - github.com\codegangsta\negroni
+- package: github.com/gorilla/context
+  version: v1.1
+  subpackages:
+  - github.com\gorilla\context
+- package: github.com/gorilla/mux
+  version: v1.1
+  subpackages:
+  - github.com\gorilla\mux
+- package: github.com/stvp/rollbar
+  subpackages:
+  - github.com\stvp\rollbar
+- package: github.com/unrolled/render
+  subpackages:
+  - github.com\unrolled\render
+- package: gopkg.in/mgo.v2
+  subpackages:
+  - gopkg.in\mgo.v2
+- package: gopkg.in/olivere/elastic.v2
+  subpackages:
+  - gopkg.in\olivere\elastic.v2
+- package: gopkg.in/tylerb/graceful.v1
+  subpackages:
+  - gopkg.in\tylerb\graceful.v1
