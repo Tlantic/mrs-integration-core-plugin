@@ -17,6 +17,7 @@ type PConfig  struct{
 	Mongodb Mongodb
 	Flags Flags
 	EventSourcing EventSourcing
+	SupportModule SupportModule
 }
 
 type Server struct {
@@ -60,12 +61,15 @@ type Flags struct {
 	S3Region string
 	RollBarToken string
 	RemoteLogs bool
-	Infos string
 }
 
 type EventSourcing struct{
 	Exchange string
 	Prefix string
+}
+
+type SupportModule struct {
+	BucketName string
 }
 
 func InitConfig(path string, prefix string, url string, contentType string){
