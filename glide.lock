@@ -1,5 +1,5 @@
 hash: daced0d34a386e4f78abc672e41397f8c2bb45eeb5a9ebd4808e822b2400166b
-updated: 2016-06-03T11:03:10.6295781+01:00
+updated: 2016-06-03T18:18:31.1518459+01:00
 imports:
 - name: github.com/armon/consul-api
   version: dcfedd50ed5334f96adee43fc88518a4f095e15c
@@ -80,10 +80,6 @@ imports:
   version: 3eb4713e2655cd1be805795be31b3f85b74b05fd
   subpackages:
   - github.com\stvp\rollbar
-- name: github.com/Tlantic/mrs-integration-api-gateway
-  version: b986a30c929932fedab25a2ba09b6bac2d0c6d61
-  subpackages:
-  - github.com\Tlantic\mrs-integration-api-gateway\domain
 - name: github.com/Tlantic/mrs-integration-utils
   version: c23ff162d970e37503784c00b2a92d7711e0501a
   subpackages:
@@ -140,7 +136,7 @@ imports:
   - gopkg.in\olivere\elastic.v2\backoff
   - gopkg.in\olivere\elastic.v2\uritemplates
 - name: gopkg.in/tylerb/graceful.v1
-  version: 9a3d4236b03bb5d26f7951134d248f9d5510d599
+  version: cc92da329b6bafe9c05e73728fb377eea184e761
   subpackages:
   - gopkg.in\tylerb\graceful.v1
 - name: gopkg.in/yaml.v2

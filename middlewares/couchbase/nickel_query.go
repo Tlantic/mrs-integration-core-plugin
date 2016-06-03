@@ -2,7 +2,7 @@ package couchbase
 
 import (
 	"github.com/couchbase/gocb"
-	"github.com/Tlantic/mrs-integration-api-gateway/domain"
+	"github.com/Tlantic/mrs-integration-core-plugin/domain"
 )
 
 type NickelQuery struct {

@@ -3,7 +3,7 @@ package couchbase
 import (
 	"github.com/couchbase/gocb"
 	"github.com/twinj/uuid"
-	"github.com/Tlantic/mrs-integration-api-gateway/domain"
+	"github.com/Tlantic/mrs-integration-core-plugin/domain"
 )
 
 type CouchbaseStore struct {
