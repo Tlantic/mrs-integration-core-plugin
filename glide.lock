@@ -1,5 +1,5 @@
-hash: 368fc86b1d82e2c4429dc20a5afce4d1fdc968a79077d8c5f1580fa4b9bcb8a9
-updated: 2016-05-30T15:33:14.8640987+01:00
+hash: daced0d34a386e4f78abc672e41397f8c2bb45eeb5a9ebd4808e822b2400166b
+updated: 2016-06-03T11:03:10.6295781+01:00
 imports:
 - name: github.com/armon/consul-api
   version: dcfedd50ed5334f96adee43fc88518a4f095e15c
@@ -10,13 +10,19 @@ imports:
   subpackages:
   - github.com\BurntSushi\toml
 - name: github.com/codegangsta/negroni
-  version: fb7b7c045dfb05dc81a5c3688c568550b5bd6e36
+  version: feacfc52d357c844f524c794947493483ed881b3
   subpackages:
   - github.com\codegangsta\negroni
 - name: github.com/coreos/go-etcd
   version: 003851be7bb0694fe3cc457a49529a19388ee7cf
   subpackages:
   - github.com\coreos\go-etcd\etcd
+- name: github.com/couchbase/gocb
+  version: af0565dd4f6167a98a5a6f180bea333426bd04a9
+  subpackages:
+  - github.com\couchbase\gocb
+  - github.com\couchbase\gocb\gocbcore
+  - github.com\couchbase\gocb\jsonx
 - name: github.com/fsnotify/fsnotify
   version: 30411dbcefb7a1da7e84f75530ad3abe4011b4f8
   subpackages:
@@ -74,12 +80,20 @@ imports:
   version: 3eb4713e2655cd1be805795be31b3f85b74b05fd
   subpackages:
   - github.com\stvp\rollbar
+- name: github.com/Tlantic/mrs-integration-api-gateway
+  version: b986a30c929932fedab25a2ba09b6bac2d0c6d61
+  subpackages:
+  - github.com\Tlantic\mrs-integration-api-gateway\domain
 - name: github.com/Tlantic/mrs-integration-utils
   version: c23ff162d970e37503784c00b2a92d7711e0501a
   subpackages:
   - github.com\Tlantic\mrs-integration-utils\configuration
+- name: github.com/twinj/uuid
+  version: 5a4b9dcb2a5e9eaba079cd853d275582fc764505
+  subpackages:
+  - github.com\twinj\uuid
 - name: github.com/ugorji/go
-  version: a396ed22fc049df733440d90efe17475e3929ccb
+  version: b94837a2404ab90efe9289e77a70694c355739cb
   subpackages:
   - github.com\ugorji\go\codec
 - name: github.com/unrolled/render
@@ -105,11 +119,11 @@ imports:
   - golang.org\x\crypto\cast5
   - golang.org\x\crypto\openpgp\elgamal
 - name: golang.org/x/net
-  version: 30db96677b74e24b967e23f911eb3364fc61a011
+  version: c4c3ea71919de159c9e246d7be66deb7f0a39a58
   subpackages:
   - golang.org\x\net\netutil
 - name: golang.org/x/sys
-  version: d4feaf1a7e61e1d9e79e6c4e76c6349e9cab0a03
+  version: 076b546753157f758b316e59bcb51e6807c04057
   subpackages:
   - golang.org\x\sys\unix
 - name: gopkg.in/mgo.v2
@@ -120,7 +134,7 @@ imports:
   - gopkg.in\mgo.v2\internal\sasl
   - gopkg.in\mgo.v2\internal\scram
 - name: gopkg.in/olivere/elastic.v2
-  version: d255a5d003ec35be2bf62361588fdb75eca8a701
+  version: 7ca93ba4173415890f2748cfd921cca8b3ebd3aa
   subpackages:
   - gopkg.in\olivere\elastic.v2
   - gopkg.in\olivere\elastic.v2\backoff
