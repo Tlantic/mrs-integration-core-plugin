@@ -34,3 +34,6 @@ import:
 - package: gopkg.in/tylerb/graceful.v1
   subpackages:
   - gopkg.in\tylerb\graceful.v1
+- package: github.com\couchbase\gocb
+  version: v1.0.8
+
