@@ -36,4 +36,5 @@ import:
   - gopkg.in\tylerb\graceful.v1
 - package: github.com\couchbase\gocb
   version: v1.0.8
+- package: github.com/sebest/logrusly
 

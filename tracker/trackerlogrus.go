@@ -2,71 +2,66 @@ package tracker
 
 
 import (
-	"fmt"
 	"github.com/Sirupsen/logrus"
-	"github.com/stvp/rollbar"
+	"github.com/sebest/logrusly"
 )
 
 type TrackerLogrusOptions struct {
 	RemoteMode bool
-	RollBarToken string
+	Token string
 }
 
 type TrackerLogrus struct {
 	RemoteMode bool
-	RollBarToken string
+	Token string
+	Log *logrus.Logger
+	Hook *logrusly.LogglyHook
 }
 
 func NewTrackerLogrus(options TrackerLogrusOptions) TrackerLogrus{
 
 	remoteMode   := false
-	rollBarToken := ""
+	token := ""
+
+	lg := logrus.New()
+
+	var hook *logrusly.LogglyHook
+
 
 	if(options.RemoteMode){
 		remoteMode = options.RemoteMode
-		rollBarToken = options.RollBarToken
+		token = options.Token
+		hook = logrusly.NewLogglyHook(token, "www.mrs-api.tlantic.com", logrus.WarnLevel, "integration", "filesender")
+		lg.Hooks.Add(hook)
 	}
-
-	rollbar.Token = rollBarToken
 
 	return TrackerLogrus{
 		RemoteMode: remoteMode,
-		RollBarToken: rollBarToken,
+		Token: token,
+		Log: lg,
+		Hook: hook,
 	}
 }
 
 func(tracker TrackerLogrus) TrackEvent(event string, params map[string]interface{}) {
-	log := logrus.WithFields(logrus.Fields{"ns": "api.tracker", "at": "TrackEvent"})
+	tracker.Log.WithFields(logrus.Fields{"ns": "api.tracker", "at": "TrackEvent"})
 
 	if params == nil {
 		params = map[string]interface{}{}
 	}
 
-	log.WithFields(logrus.Fields{"event": event}).WithFields(logrus.Fields(params)).Info()
+	tracker.Log.WithFields(logrus.Fields{"event": event}).WithFields(logrus.Fields(params)).Error("Information")
+	tracker.Hook.Flush()
 
 }
 
 func(tracker TrackerLogrus) TrackLog(event string, params map[string]interface{}) {
 	params["state"] = "log"
-
-	if(tracker.RemoteMode){
-		rollbar.Message("info", fmt.Sprintf("%s - %v", event, params))
-	}
-
 	tracker.TrackEvent(event, params)
 }
 
-func(tracker TrackerLogrus) TrackError(event string, err error, params map[string]interface{}) {
-	params["error"] = fmt.Sprintf("%v", err)
+func(tracker TrackerLogrus) TrackError(event string, params map[string]interface{}) {
 	params["state"] = "error"
-
-
-	if(tracker.RemoteMode){
-		extraField := &rollbar.Field{"env", params}
-		rollbar.Error(rollbar.ERR, err, extraField)
-	}
-
-
 	tracker.TrackEvent(event, params)
 }
 
