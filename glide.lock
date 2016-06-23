@@ -1,5 +1,5 @@
-hash: daced0d34a386e4f78abc672e41397f8c2bb45eeb5a9ebd4808e822b2400166b
-updated: 2016-06-03T18:18:31.1518459+01:00
+hash: 5de7ec9f90ae514ad82b18dc5a535d17acaa94f2f6eec7f545e3593df0bdbf72
+updated: 2016-06-23T15:34:11.0310417+01:00
 imports:
 - name: github.com/armon/consul-api
   version: dcfedd50ed5334f96adee43fc88518a4f095e15c
@@ -10,7 +10,7 @@ imports:
   subpackages:
   - github.com\BurntSushi\toml
 - name: github.com/codegangsta/negroni
-  version: feacfc52d357c844f524c794947493483ed881b3
+  version: dcaac9107a7a6ba4cf5143afc145e2b70a1c12c2
   subpackages:
   - github.com\codegangsta\negroni
 - name: github.com/coreos/go-etcd
@@ -36,7 +36,7 @@ imports:
   subpackages:
   - github.com\gorilla\mux
 - name: github.com/hashicorp/hcl
-  version: 9a905a34e6280ce905da1a32344b25e81011197a
+  version: 5b7dbf7eefffea49afb3c9655d6582c72fae5fd1
   subpackages:
   - github.com\hashicorp\hcl
   - github.com\hashicorp\hcl\hcl\ast
@@ -55,6 +55,14 @@ imports:
   version: d2dd0262208475919e1a362f675cfc0e7c10e905
   subpackages:
   - github.com\mitchellh\mapstructure
+- name: github.com/sebest/logrusly
+  version: d2415b54e6af1e6b3d9b1ab9a49c779f25599922
+  subpackages:
+  - github.com\sebest\logrusly
+- name: github.com/segmentio/go-loggly
+  version: e78f6971ebca5835614673e2f5f6a47ca5f13501
+  subpackages:
+  - github.com\segmentio\go-loggly
 - name: github.com/Sirupsen/logrus
   version: 4b6ea7319e214d98c938f12692336f7ca9348d6b
   subpackages:
@@ -68,11 +76,11 @@ imports:
   subpackages:
   - github.com\spf13\jwalterweatherman
 - name: github.com/spf13/pflag
-  version: cb88ea77998c3f024757528e3305022ab50b43be
+  version: 367864438f1b1a3c7db4da06a2f55b144e6784e0
   subpackages:
   - github.com\spf13\pflag
 - name: github.com/spf13/viper
-  version: d8a428b8a30606e1d0b355d91edf282609ade1a6
+  version: c1ccc378a054ea8d4e38d8c67f6938d4760b53dd
   subpackages:
   - github.com\spf13\viper
   - github.com\spf13\viper\remote
@@ -85,7 +93,7 @@ imports:
   subpackages:
   - github.com\Tlantic\mrs-integration-utils\configuration
 - name: github.com/twinj/uuid
-  version: 5a4b9dcb2a5e9eaba079cd853d275582fc764505
+  version: b505f2cca343b7b21416b27b1f2ad88469800892
   subpackages:
   - github.com\twinj\uuid
 - name: github.com/ugorji/go
@@ -96,6 +104,10 @@ imports:
   version: 198ad4d8b8a4612176b804ca10555b222a086b40
   subpackages:
   - github.com\unrolled\render
+- name: github.com/visionmedia/go-debug
+  version: ff4a55a20a86994118644bbddc6a216da193cc13
+  subpackages:
+  - github.com\visionmedia\go-debug
 - name: github.com/xordataexchange/crypt
   version: 749e360c8f236773f28fc6d3ddfce4a470795227
   subpackages:
@@ -105,7 +117,7 @@ imports:
   - github.com\xordataexchange\crypt\backend\etcd
   - github.com\xordataexchange\crypt\encoding\secconf
 - name: golang.org/x/crypto
-  version: 5bcd134fee4dd1475da17714aac19c0aa0142e2f
+  version: f3241ce8505855877cc8a9717bd61a0f7c4ea83c
   subpackages:
   - golang.org\x\crypto\openpgp
   - golang.org\x\crypto\openpgp\armor
@@ -115,28 +127,28 @@ imports:
   - golang.org\x\crypto\cast5
   - golang.org\x\crypto\openpgp\elgamal
 - name: golang.org/x/net
-  version: c4c3ea71919de159c9e246d7be66deb7f0a39a58
+  version: bc3663df0ac92f928d419e31e0d2af22e683a5a2
   subpackages:
   - golang.org\x\net\netutil
 - name: golang.org/x/sys
-  version: 076b546753157f758b316e59bcb51e6807c04057
+  version: 62bee037599929a6e9146f29d10dd5208c43507d
   subpackages:
   - golang.org\x\sys\unix
 - name: gopkg.in/mgo.v2
-  version: b6e2fa371e64216a45e61072a96d4e3859f169da
+  version: 29cc868a5ca65f401ff318143f9408d02f4799cc
   subpackages:
   - gopkg.in\mgo.v2
   - gopkg.in\mgo.v2\bson
   - gopkg.in\mgo.v2\internal\sasl
   - gopkg.in\mgo.v2\internal\scram
 - name: gopkg.in/olivere/elastic.v2
-  version: 7ca93ba4173415890f2748cfd921cca8b3ebd3aa
+  version: 3f0629529e5f0ac67d7a16566e478aa7ec6102aa
   subpackages:
   - gopkg.in\olivere\elastic.v2
   - gopkg.in\olivere\elastic.v2\backoff
   - gopkg.in\olivere\elastic.v2\uritemplates
 - name: gopkg.in/tylerb/graceful.v1
-  version: cc92da329b6bafe9c05e73728fb377eea184e761
+  version: ecde8c8f16df93a994dda8936c8f60f0c26c28ab
   subpackages:
   - gopkg.in\tylerb\graceful.v1
 - name: gopkg.in/yaml.v2
