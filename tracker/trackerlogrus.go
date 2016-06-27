@@ -31,7 +31,7 @@ func NewTrackerLogrus(options TrackerLogrusOptions) TrackerLogrus{
 	if(options.RemoteMode){
 		remoteMode = options.RemoteMode
 		token = options.Token
-		hook = logrusly.NewLogglyHook(token, "www.mrs-api.tlantic.com", logrus.WarnLevel, "integration", "filesender")
+		hook = logrusly.NewLogglyHook(token, "www.mrs-api.tlantic.com", logrus.WarnLevel, "integration")
 		lg.Hooks.Add(hook)
 	}
 
