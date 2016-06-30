@@ -51,7 +51,10 @@ func(tracker TrackerLogrus) TrackEvent(event string, params map[string]interface
 	}
 
 	tracker.Log.WithFields(logrus.Fields{"event": event}).WithFields(logrus.Fields(params)).Error("Information")
-	tracker.Hook.Flush()
+	if(tracker.RemoteMode){
+		tracker.Hook.Flush()
+	}
+
 
 }
 
